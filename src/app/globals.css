@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #fafaf9;
+  --color-foreground: #1c1917;
+  --color-muted: #f5f5f4;
+  --color-muted-foreground: #78716c;
+  --color-card: #ffffff;
+  --color-border: #e7e5e4;
+  --color-primary: #0a0a0a;
+  --color-primary-foreground: #fafaf9;
+  --color-accent: #f97316;
+  --color-accent-foreground: #ffffff;
+  --color-success: #16a34a;
+  --color-danger: #dc2626;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+html,
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme inline {
+    --color-background: #0c0a09;
+    --color-foreground: #fafaf9;
+    --color-muted: #1c1917;
+    --color-muted-foreground: #a8a29e;
+    --color-card: #1c1917;
+    --color-border: #292524;
+    --color-primary: #fafaf9;
+    --color-primary-foreground: #0c0a09;
+  }
+}
+
+.chart-grid line {
+  stroke: var(--color-border);
+}
